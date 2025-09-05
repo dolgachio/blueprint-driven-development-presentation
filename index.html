@@ -1,235 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="uk">
+  <head>
     <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@shower/ribbon/styles/styles.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
     <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
     </style>
-</head>
-<body class="shower list">
-
+  </head>
+  <body class="shower list">
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+      <h1>Shower Presentation Engine</h1>
+      <p>Yours Truly, Famous Inc.</p>
     </header>
 
     <section class="slide" data-name="Talk title">
-        <h2 style="text-align: left;
-        padding-left: 100px; padding-bottom: 20px; font-size: 100px;">
-            <div><span class="text-emphasize">C</span>ommon</div>
-            <div><span class="text-emphasize">S</span>ense</div>
-            <div><span class="text-emphasize">D</span>riven</div>
-            <div><span class="text-emphasize">D</span>evelopment</div>
-        </h2>
+      <h2
+        style="
+          text-align: left;
+          padding-left: 100px;
+          padding-bottom: 20px;
+          font-size: 100px;
+        "
+      >
+        <div><span class="text-emphasize">B</span>lueprint</div>
+        <div><span class="text-emphasize">D</span>riven</div>
+        <div><span class="text-emphasize">D</span>evelopment</div>
+      </h2>
     </section>
 
     <section class="slide" data-name="who-am-i">
-        <h2>Who am I?</h2>
-        <div class="who-am-i" data-name="who-am-i">
-            <img class="who-am-i__image" src="./images/stas-dolgachov.jpg" alt="Speaker image">
-            <ul class="who-am-i__content">
-                <li class="next">~10 років у розробці</li>
-                <li class="next">JS, TS, Angular, React, Next.js</li>
-                <li class="next">~4 роки брехав, що пишу по TDD</li>
-            </ul>
-        </div>
+      <h2>Who am I?</h2>
+      <div class="who-am-i" data-name="who-am-i">
+        <img
+          class="who-am-i__image"
+          src="./images/who-am-i.jpg"
+          alt="Speaker image"
+        />
+        <ul class="who-am-i__content">
+          <li class="next">~10 років у розробці</li>
+          <li class="next">JS, TS, Angular, React, Next.js</li>
+          <li class="next">~4 роки брехав, що пишу по TDD</li>
+        </ul>
+      </div>
     </section>
 
     <section class="slide" data-name="bad code around us">
-        <h2>Чому весь код навколо нас поганий?</h2>
-        <ol>
-            <li class="next"><h3>Низька компетенція всіх крім нас самих.</h3></li>
-            <li class="next"><h3>Немає часу на рефакторинг/виправлення.</h3></li>
-            <li class="next"><h3>Замовники винні.</h3></li>
-            <li class="next text-emphasize"><h3>Ми спочатку робимо, а потім думаємо. <span class="next">✅</span></h3></li>
-        </ol>
+      <h2>Чому весь код навколо нас поганий?</h2>
+      <ol>
+        <li class="next"><h3>Низька компетенція всіх крім нас самих.</h3></li>
+        <li class="next"><h3>Немає часу на рефакторинг/виправлення.</h3></li>
+        <li class="next"><h3>Замовники винні.</h3></li>
+        <li class="next text-emphasize">
+          <h3>
+            Ми спочатку робимо, а потім думаємо. <span class="next">✅</span>
+          </h3>
+        </li>
+      </ol>
     </section>
 
     <section class="slide" data-name="TDD">
-        <h2 class="shout">TDD що це взагалі?</h2>
-        <h4 style="float: right;">*(життєве визначення)</h4>
+      <h2 class="shout">TDD що це взагалі?</h2>
+      <h4 style="float: right">*(життєве визначення)</h4>
     </section>
 
     <section class="slide" data-name="TDD">
-        <h2>TDD що це взагалі?</h2>
-        <h3>Test Driven Development або тести до коду.</h3>
-        <h3 class="next">БУКВАЛЬНО всі знають що це, всі пробували, але ніхто не пише 😉</h3>       
+      <h2>TDD що це взагалі?</h2>
+      <h3>Test Driven Development або тести до коду.</h3>
+      <h3 class="next">
+        БУКВАЛЬНО всі знають що це, всі пробували, але ніхто не пише 😉
+      </h3>
     </section>
 
     <section class="slide" data-name="TDD hate">
-        <h2>Чому ніхто не хоче писати по TDD?</h2>
-        <ol>
-            <li class="next"><h3>Тести - це зайва робота.</h3></li>
-            <li class="next"><h3>Тести постійно падають.</h3></li>
-            <li class="next"><h3>Тести можна написати і потім.</h3></li>
-        </ol>
+      <h2>Чому ніхто не хоче писати по TDD?</h2>
+      <ol>
+        <li class="next"><h3>Тести - це зайва робота.</h3></li>
+        <li class="next"><h3>Тести постійно падають.</h3></li>
+        <li class="next"><h3>Тести можна написати і потім.</h3></li>
+      </ol>
     </section>
 
     <section class="slide" data-name="What if i tell you">
-        <img class="cover" src="./images/morpheus.jpg" alt="morpheus from matrix">
+      <img
+        class="cover"
+        src="./images/morpheus.jpg"
+        alt="morpheus from matrix"
+      />
     </section>
 
     <section class="slide" data-name="test are not important">
-        <h2 class="shout">Тести не головне.</h2>
+      <h2 class="shout">Тести не головне.</h2>
     </section>
-    
+
     <section class="slide" data-name="my way">
-        <h2 class="shout">Правильний TDD</h2>
+      <h2 class="shout">Правильний TDD</h2>
     </section>
 
     <section class="slide">
-        <h2 class="shout">1. Navigation map</h2>
+      <h2 class="shout">1. Navigation map</h2>
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <h2>1. Navigation map</h2>
-        <ol>
-            <li class="text-emphasize"><h3>Сбор и анализ информации.</h3></li>
-        </ol>
+      <h2>1. Navigation map</h2>
+      <ol>
+        <li class="text-emphasize"><h3>Збір та аналіз інформації.</h3></li>
+      </ol>
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <img class="image-normalize" src="./images/investigate.JPG" alt="Сбор и анализ информации">
+      <img
+        class="image-normalize"
+        src="./images/investigate.JPG"
+        alt="Збір та аналіз інформації"
+      />
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <h2>1. Navigation map</h2>
-        <ol>
-            <li><h3>Сбор и анализ информации.</h3></li>
-            <li class="text-emphasize"><h3>Названия сущностей и их API</h3></li>
-        </ol>
+      <h2>1. Navigation map</h2>
+      <ol>
+        <li><h3>Збір та аналіз інформації.</h3></li>
+        <li class="text-emphasize"><h3>Назви сутностей та їх API</h3></li>
+      </ol>
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <img class="cover" src="./images/service-example.JPG" alt="Пример сервиса 1">
+      <img
+        class="cover"
+        src="./images/service-example.JPG"
+        alt="Приклад сервісу 1"
+      />
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <img class="cover" src="./images/service-example-2.JPG" alt="Пример сервиса 2">
+      <img
+        class="cover"
+        src="./images/service-example-2.JPG"
+        alt="Приклад сервісу 2"
+      />
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <h2>1. Navigation map</h2>
-        <ol>
-            <li><h3>Сбор и анализ информации.</h3></li>
-            <li><h3>Названия сущностей и их API</h3></li>
-            <li class="text-emphasize"><h3>Четкий список того, что нужно делать (TODO)</h3></li>
-        </ol>
+      <h2>1. Navigation map</h2>
+      <ol>
+        <li><h3>Збір та аналіз інформації.</h3></li>
+        <li><h3>Назви сутностей та їх API</h3></li>
+        <li class="text-emphasize">
+          <h3>Чіткий список того, що потрібно робити (TODO)</h3>
+        </li>
+      </ol>
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <img class="image-normalize" src="./images/road-map.JPG" alt="TODO list">
+      <img
+        class="image-normalize"
+        src="./images/road-map.JPG"
+        alt="TODO list"
+      />
     </section>
 
     <section class="slide" data-name="Navigation map">
-        <img class="cover" src="./images/complete-navigation-map.JPG" alt="complete-navigation-map">
+      <img
+        class="cover"
+        src="./images/complete-navigation-map.JPG"
+        alt="complete-navigation-map"
+      />
     </section>
 
     <section class="slide" data-name="Keep calm">
-        <h2 class="shout">Keep calm.</h2>
+      <h2 class="shout">Keep calm.</h2>
     </section>
 
     <section class="slide" data-name="Complete Navigation Map">
-        <h2>TODO (Navigation map)</h2>
-        <ol>
-            <li><h3>Сервис по преобразованию FileHierarchyTreeService</h3>
-                <ol>
-                    <li>метод getFilesHierarchy(tree, someFlag)</li>
-                    <li>метод formatTree(nodes)</li>
-                </ol>
-            </li>
-            <li>Верстка для отображения</li>
-            <li>Использовать сервис в компоненте</li>
-            <li>...</li>
-            <li>и т.д.</li>
-        </ol>
+      <h2>TODO (Navigation map)</h2>
+      <ol>
+        <li>
+          <h3>Сервіс з перетворення FileHierarchyTreeService</h3>
+          <ol>
+            <li>метод getFilesHierarchy(tree, someFlag)</li>
+            <li>метод formatTree(nodes)</li>
+          </ol>
+        </li>
+        <li>Верстка для відображення</li>
+        <li>Використовувати сервіс у компоненті</li>
+        <li>...</li>
+        <li>і т.д.</li>
+      </ol>
     </section>
 
     <section class="slide" data-name="tests and code">
-        <h2 class="shout">2. Тест 🔁 Код </h2>
+      <h2 class="shout">2. Тест 🔁 Код</h2>
     </section>
 
     <section class="slide" data-name="satisfying">
-        <h2>Лучшая часть. Но почему?</h2>
-        <img class="cover" src="./images/satisfying.gif" alt="satisfying">
+      <h2>Найкраща частина. Але чому?</h2>
+      <img class="cover" src="./images/satisfying.gif" alt="satisfying" />
     </section>
 
     <section class="slide" data-name="Cons">
-        <h2>Минусы:</h2>
-        <ol>
-            <li class="next"><h3>Думать сложно.</h3></li>
-            <li class="next"><h3>Накидывать входные данные для тестов сложно.</h3></li>
-            <li class="next"><h3>На начальных этапах кажется, что ты ничего не делаешь.</h3></li>
-        </ol>
+      <h2>Мінуси:</h2>
+      <ol>
+        <li class="next"><h3>Думати складно.</h3></li>
+        <li class="next"><h3>Накидати вхідні дані для тестів складно.</h3></li>
+        <li class="next">
+          <h3>На початкових етапах здається, що ти нічого не робиш.</h3>
+        </li>
+      </ol>
     </section>
 
     <section class="slide">
-        <h2>Плюсы:</h2>
-        <ol class="list-fit">
-            <li class="next"><h3>Уверенность в своем коде.</h3></li>
-            <li class="next"><h3>Ускорение работы по сравнению с проверкой в браузере.</h3></li>
-            <li class="next"><h3>Никогда не заблокирован бэкендом.</h3></li>
-            <li class="next"><h3>Сильно проще оценить задачу по сложности/времени.</h3></li>
-            <li class="next"><h3>Можно выделываться перед другими.</h3></li>
-        </ol>
+      <h2>Плюси:</h2>
+      <ol class="list-fit">
+        <li class="next"><h3>Впевненість у своєму коді.</h3></li>
+        <li class="next">
+          <h3>Прискорення роботи порівняно з перевіркою в браузері.</h3>
+        </li>
+        <li class="next"><h3>Ніколи не заблокований бекендом.</h3></li>
+        <li class="next">
+          <h3>Значно простіше оцінити задачу за складністю/часом.</h3>
+        </li>
+        <li class="next"><h3>Можна видєлуватись перед іншими.</h3></li>
+      </ol>
     </section>
 
     <section class="slide" data-name="bad code around us">
-        <h2>Почему весь код вокруг нас плохой?</h2>
-        <ol>
-            <li><h3>Низкая компетенция всех кроме нас самих.</h3></li>
-            <li><h3>Лень что-то исправлять.</h3></li>
-            <li><h3>Заказчики виноваты.</h3></li>
-            <li class="text-emphasize"><h3>Мы не думаем, что делаем.</h3></li>
-        </ol>
+      <h2>Чому весь код навколо нас поганий?</h2>
+      <ol>
+        <li><h3>Низька компетенція всіх крім нас самих.</h3></li>
+        <li><h3>Лінь щось виправляти.</h3></li>
+        <li><h3>Замовники винні.</h3></li>
+        <li class="text-emphasize"><h3>Ми не думаємо, що робимо.</h3></li>
+      </ol>
     </section>
 
     <section class="slide" data-name="Practical advices">
-        <h2>Практические советы:</h2>
-        <ol>
-            <li class="next"><h3>Попробуйте ТОЛЬКО Navigation map (План) 📙</h3></li>
-            <li class="next"><h3>Напишите тест на багу. 🐞</h3></li>
-            <li class="next"><h3>Не пытайтесь себя сломать. ❤️</h3></li>
-        </ol>
+      <h2>Практичні поради:</h2>
+      <ol>
+        <li class="next"><h3>Спробуйте ТІЛЬКИ Navigation map (План) 📙</h3></li>
+        <li class="next"><h3>Напишіть тест на багу. 🐞</h3></li>
+        <li class="next"><h3>Не намагайтеся себе зламати. ❤️</h3></li>
+      </ol>
     </section>
 
-    <section class="slide" data-name="Резюме">
-        <h2 class="shout">Резюме</h2>
+    <section class="slide" data-name="Підсумки">
+      <h2 class="shout">Підсумки</h2>
     </section>
 
     <section class="slide" data-name="links">
-        <h2>Ссылки</h2>
-        <ol>
-            <li><a target="_blank" href="https://learn.epam.com/detailsPage?id=2ed98f13-1477-4b4e-af7e-c6bd19834579">
-                Тренинг: Introduction to Test Driven Development
-            </a></li>
-            <li><a target="_blank" href="https://www.youtube.com/watch?v=Eu35xM76kKY">
-                [VIDEO] Unit testing in JavaScript Part 1 (FunFunFunction)
-            </a></li>
-            <li><a target="_blank" href="https://www.youtube.com/watch?v=XsFQEUP1MxI">
-                [VIDEO] Unit testing in JavaScript Part 2 (FunFunFunction)
-            </a></li>
-        </ol>
+      <h2>Посилання</h2>
+      <ol>
+        <!--
+                <li><a target="_blank" href="https://learn.epam.com/detailsPage?id=2ed98f13-1477-4b4e-af7e-c6bd19834579">
+                    Тренінг: Introduction to Test Driven Development
+                </a></li>
+            -->
+        <li>
+          <a target="_blank" href="https://www.youtube.com/watch?v=Eu35xM76kKY">
+            [VIDEO] Unit testing in JavaScript Part 1 (FunFunFunction)
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.youtube.com/watch?v=XsFQEUP1MxI">
+            [VIDEO] Unit testing in JavaScript Part 2 (FunFunFunction)
+          </a>
+        </li>
+      </ol>
     </section>
 
     <section class="slide" data-name="Q&A">
-        <h2 class="shout">Q&A</h2>
+      <h2 class="shout">Q&A</h2>
     </section>
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
 
-    <script src="node_modules/@shower/core/shower.min.js"></script>
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
     <!-- Copyright © 2020 Yours Truly, Famous Inc. -->
-
-</body>
+  </body>
 </html>
