@@ -32,8 +32,12 @@
       >
         <div><span class="text-emphasize">B</span>lueprint</div>
         <div><span class="text-emphasize">D</span>riven</div>
-        <div><span class="text-emphasize">D</span>evelopment</div>
+        <div><span class="text-emphasize">D</span>evelopment *</div>
       </h2>
+      <div>
+        * - презентація все ще в процесі підготовки, план краще відображає мої
+        наміри
+      </div>
     </section>
 
     <section class="slide" data-name="who-am-i">
@@ -50,6 +54,10 @@
           <li class="next">~4 роки брехав, що пишу по TDD</li>
         </ul>
       </div>
+    </section>
+
+    <section class="slide" data-name="intro">
+      <h2 class="shout">Частина 1: TDD and friends</h2>
     </section>
 
     <section class="slide" data-name="bad code around us">
@@ -199,13 +207,87 @@
       <h2 class="shout">2. Тест 🔁 Код</h2>
     </section>
 
+    <section class="slide" data-name="part 2 intro">
+      <h2 class="shout">Частина 2: ШІ і тести</h2>
+    </section>
+
+    <section class="slide" data-name="AI and tests Part 1">
+      <h2>ШІ і тести</h2>
+      <h4>1. Як ми викорсистовуємо ШІ для написання тестів</h4>
+      <ul>
+        <li>Спочатку пишемо код - потім генеруємо тести</li>
+        <li>
+          Це не завжди гарна ідея, бо якщо помилка в коді, то буде тест на
+          помилку
+        </li>
+        <li>Різні люди генерують оце все по різному</li>
+      </ul>
+    </section>
+
+    <section class="slide" data-name="AI and tests Part 2">
+      <h2>ШІ і тести</h2>
+      <h4>2. Як краще використовувати ШІ для написання тестів</h4>
+      <ul>
+        <li>Писати тести до коду</li>
+        <li>
+          Використовувати ШІ для генерації тестів на основі navigation map
+        </li>
+        <li>ЗАВЖДИ ДИВИТИСЬ УВАЖНО ЩО ТАМ НАГЕНЕРУВАЛО, БО БУДЕ БІДА</li>
+      </ul>
+    </section>
+
+    <section class="slide" data-name="AI and tests Part 3">
+      <h2>ШІ і тести</h2>
+      <h3>Тести все ще важливі</h3>
+      <h4>Не вірете? Послухайте розумних людей на наступному слайді</h4>
+    </section>
+
+    <section class="slide" data-name="AI and tests Part 4">
+      <a target="_blank" href="https://www.youtube.com/watch?v=1A6uPztchXk">
+        <img
+          class="cover"
+          src="./images/vibe-coding.png"
+          alt="thumbnail of video Vibe Coding analzation"
+        />
+      </a>
+    </section>
+
+    <section class="slide" data-name="part 2 intro">
+      <h2 class="shout">Частина 3: Вимоги до написання тестів</h2>
+    </section>
+
+    <section class="slide" data-name="AI and tests Part 1">
+      <h2>Вимоги до написання тестів</h2>
+      <h3>
+        Сюрприз, сюрприз: по нормальному треба писати не тільки код, але і тести
+      </h3>
+      <h3>Тут буде кілька слайдів про те, як писати тести і чому так</h3>
+      <ul>
+        <li>На основі мого досвіду і...</li>
+        <li>
+          <a
+            href="https://github.com/goldbergyoni/javascript-testing-best-practices"
+            >javascript-testing-best-practices (24.5k ⭐)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/goldbergyoni/nodejs-testing-best-practices"
+            >nodejs-testing-best-practices (4.1k ⭐)</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <!--
     <section class="slide" data-name="satisfying">
       <h2>Найкраща частина. Але чому?</h2>
       <img class="cover" src="./images/satisfying.gif" alt="satisfying" />
     </section>
+    -->
 
     <section class="slide" data-name="Cons">
-      <h2>Мінуси:</h2>
+      <h2>Підсумки, мінуси:</h2>
       <ol>
         <li class="next"><h3>Думати складно.</h3></li>
         <li class="next"><h3>Накидати вхідні дані для тестів складно.</h3></li>
@@ -216,7 +298,7 @@
     </section>
 
     <section class="slide">
-      <h2>Плюси:</h2>
+      <h2>Підсумки, плюси:</h2>
       <ol class="list-fit">
         <li class="next"><h3>Впевненість у своєму коді.</h3></li>
         <li class="next">
@@ -236,7 +318,9 @@
         <li><h3>Низька компетенція всіх крім нас самих.</h3></li>
         <li><h3>Лінь щось виправляти.</h3></li>
         <li><h3>Замовники винні.</h3></li>
-        <li class="text-emphasize"><h3>Ми спочатку робимо, а потім думаємо. ✅</h3></li>
+        <li class="text-emphasize">
+          <h3>Ми спочатку робимо, а потім думаємо. ✅</h3>
+        </li>
       </ol>
     </section>
 
@@ -245,13 +329,21 @@
       <ol>
         <li class="next"><h3>Спробуйте ТІЛЬКИ Navigation map (План) 📙</h3></li>
         <li class="next"><h3>Напишіть тест на багу. 🐞</h3></li>
-        <li class="next"><h3>Не намагайтеся себе зламати. ❤️</h3></li>
+        <li class="next">
+          <h3>
+            Не намагайтеся себе зламати. І не пропонуйте цей підхід іншим поки
+            самі не спробуєте ❤️
+          </h3>
+        </li>
       </ol>
     </section>
+
+    <!--
 
     <section class="slide" data-name="Підсумки">
       <h2 class="shout">Підсумки</h2>
     </section>
+    -->
 
     <section class="slide" data-name="links">
       <h2>Посилання</h2>
@@ -262,6 +354,18 @@
                 </a></li>
             -->
         <li>
+          <a
+            href="https://github.com/goldbergyoni/javascript-testing-best-practices"
+            >javascript-testing-best-practices (24.5k ⭐)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/goldbergyoni/nodejs-testing-best-practices"
+            >nodejs-testing-best-practices (4.1k ⭐)</a
+          >
+        </li>
+        <li>
           <a target="_blank" href="https://www.youtube.com/watch?v=Eu35xM76kKY">
             [VIDEO] Unit testing in JavaScript Part 1 (FunFunFunction)
           </a>
@@ -270,6 +374,11 @@
           <a target="_blank" href="https://www.youtube.com/watch?v=XsFQEUP1MxI">
             [VIDEO] Unit testing in JavaScript Part 2 (FunFunFunction)
           </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=1A6uPztchXk" target="_blank"
+            >Vibe Coding Is The WORST IDEA Of 2025</a
+          >
         </li>
       </ol>
     </section>
