@@ -1,0 +1,14 @@
+.text-emphasize {
+    color: #bada55;
+}
+
+.image-normalize {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.list-fit h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
