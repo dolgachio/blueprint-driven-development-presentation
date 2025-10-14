@@ -11,7 +11,13 @@
     "presentation:start": "npm run start --workspace=presentation",
     "presentation:serve": "npm run serve --workspace=presentation",
     "presentation:archive": "npm run archive --workspace=presentation",
-    "presentation:publish": "npm run publish --workspace=presentation"
+    "presentation:publish": "npm run publish --workspace=presentation",
+    "demo:dev": "npm run dev --workspace=demo",
+    "demo:build": "npm run build --workspace=demo",
+    "demo:preview": "npm run preview --workspace=demo",
+    "demo:test": "npm run test --workspace=demo",
+    "demo:test:ui": "npm run test:ui --workspace=demo",
+    "demo:test:coverage": "npm run test:coverage --workspace=demo"
   },
   "devDependencies": {
     "@shower/cli": "^0.3.1"

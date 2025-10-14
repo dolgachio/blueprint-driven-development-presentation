@@ -5,6 +5,7 @@ This monorepo contains the Blueprint Driven Development presentation and related
 ## Structure
 
 - `packages/presentation/` - Main presentation slides and assets
+- `packages/demo/` - React demo application with TypeScript and Vitest
 - `presentation-plan.md` - Detailed presentation plan (also available in packages/presentation/)
 
 ## Getting Started
@@ -31,10 +32,36 @@ npm run presentation:pdf
 npm run presentation:serve
 ```
 
+### Running the Demo Application
+```bash
+# Start the demo development server
+npm run demo:dev
+
+# Build the demo application
+npm run demo:build
+
+# Run demo tests
+npm run demo:test
+
+# Run tests with UI
+npm run demo:test:ui
+
+# Run tests with coverage
+npm run demo:test:coverage
+```
+
 ## Workspaces
 
 ### Presentation
 Located in `packages/presentation/` - contains the main Blueprint Driven Development presentation slides.
+
+### Demo
+Located in `packages/demo/` - React application demonstrating Blueprint Driven Development principles with:
+- **React 18** with TypeScript
+- **Vite** for development and build
+- **Vitest** for testing with jsdom environment
+- **ESLint** for code linting
+- **Testing Library** for component testing
 
 Презентація до доповіді `Blueprint Driven Development, або як я писав тести до коду і не вмер`
 
