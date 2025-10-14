@@ -1,0 +1,29 @@
+{
+  "name": "presentation",
+  "version": "1.0.0",
+  "description": "Blueprint Driven Development presentation",
+  "private": true,
+  "scripts": {
+    "pdf": "shower pdf",
+    "start": "shower start",
+    "serve": "shower serve",
+    "archive": "shower archive",
+    "publish": "shower publish"
+  },
+  "dependencies": {
+    "@shower/core": "^3.3.0",
+    "@shower/material": "^2.5.1",
+    "@shower/ribbon": "^3.5.2"
+  },
+  "devDependencies": {
+    "@shower/cli": "^0.3.1"
+  },
+  "keywords": [
+    "presentation",
+    "blueprint-driven-development",
+    "tdd",
+    "testing"
+  ],
+  "author": "Stanislav Dolgachov",
+  "license": "MIT"
+}

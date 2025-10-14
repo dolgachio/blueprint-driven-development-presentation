@@ -1,16 +1,23 @@
 {
+  "name": "blueprint-driven-development-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blueprint Driven Development presentation monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "pdf": "shower pdf",
-    "start": "shower start",
-    "serve": "shower serve",
-    "archive": "shower archive",
-    "publish": "shower publish"
-  },
-  "dependencies": {
-    "@shower/core": "^3.3.0",
-    "@shower/ribbon": "^3.5.2"
+    "presentation:pdf": "npm run pdf --workspace=presentation",
+    "presentation:start": "npm run start --workspace=presentation",
+    "presentation:serve": "npm run serve --workspace=presentation",
+    "presentation:archive": "npm run archive --workspace=presentation",
+    "presentation:publish": "npm run publish --workspace=presentation"
   },
   "devDependencies": {
     "@shower/cli": "^0.3.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
   }
 }

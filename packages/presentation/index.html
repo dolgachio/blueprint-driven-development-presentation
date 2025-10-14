@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="node_modules/@shower/ribbon/styles/styles.css"
+      href="styles/ribbon/styles.css"
     />
     <link rel="stylesheet" href="styles/main.css" />
     <style>
@@ -71,6 +71,26 @@
       </ol>
     </section>
 
+    <section class="slide" data-name="task description">
+      <h2>Візьмемо реальну задачу з проєкту</h2>
+      <p>
+        Користувач має завантажити Excel File / CSV файл, обрати з нього
+        конкретні колонки і ми його маємо використати для імпорту даних. Ми
+        будемо реалізовувати перегляд даних з файлу.
+      </p>
+      <ul>
+        <li>дані надходять з сервера у DTO визначеного формату</li>
+        <li>є три види типів даних в комірках таблички: дата, гроші, текст</li>
+        <li>користувач має можливість обирати рядок і колонку</li>
+      </ul>
+    </section>
+
+    <section class="slide" data-name="task demo">
+      <h2>Демонстрація задачі</h2>
+
+      <h3>TBD</h3>
+    </section>
+
     <section class="slide center-content" data-name="TDD">
       <h2>TDD що це взагалі?</h2>
       <h4 style="float: right">*(життєве визначення)</h4>
@@ -109,31 +129,52 @@
       <h2>Правильний TDD: Navigation map</h2>
     </section>
 
+    <section class="slide" data-name="my way">
+      <h2>Navigation map -</h2>
+      <p>
+        чіткий план з назвами абстракцій, описом їх API, покроковим детальним
+        списком задач.
+      </p>
+    </section>
+
     <section class="slide" data-name="Navigation map">
-      <h2>1. Navigation map</h2>
+      <h2>Navigation map</h2>
       <ol>
-        <li class="text-emphasize"><h3>Збір та аналіз інформації.</h3></li>
+        <li><bold>Збір та аналіз інформації.</bold></li>
+        <li><bold>Назви сутностей та їх API</bold></li>
+        <li><bold>Чіткий список TODO</bold></li>
       </ol>
     </section>
 
-    <section class="slide" data-name="Navigation map">
-      <img
-        class="image-normalize"
-        src="./images/investigate.JPG"
-        alt="Збір та аналіз інформації"
-      />
-    </section>
+    <!--
+      <section class="slide" data-name="Navigation map">
+        <img
+          class="image-normalize"
+          src="./images/investigate.JPG"
+          alt="Збір та аналіз інформації"
+        />
+      </section>
+    -->
 
     <section class="slide" data-name="Navigation map">
-      <h2>1. Navigation map</h2>
-      <ol>
-        <li><h3>Збір та аналіз інформації.</h3></li>
-        <li class="text-emphasize">
-          <h3>
-            Назви сутностей та їх API: SOLID, KISS, YAGNI, тощо.
-          </h3>
+      <h2>Navigation map</h2>
+      <h3>1. Збір та аналіз інформації.</h3>
+
+      <h4>У цьому блоці будуть надані сутності, їх назви і структура.</h4>
+      <ul>
+        <li>
+          `FileUploaded` компонент завантаження і аналізу файлу від користувача
         </li>
-      </ol>
+        <li>
+          `fileDataToPreview` мапер даних від компонента до подальшого перегляду
+          файла
+        </li>
+        <li>
+          `formatForPreview` форматер комірок таблиці, який повертає дані для
+          трьох типів: дата, гроші, текст
+        </li>
+        <li>`FilePreview` компонент для перегляду таблиці</li>
+      </ul>
     </section>
 
     <section class="slide" data-name="Navigation map">

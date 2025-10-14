@@ -1,5 +1,7 @@
 .text-emphasize {
-  color: #bada55;
+  color: rgb(34, 2, 99);
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .image-normalize {
