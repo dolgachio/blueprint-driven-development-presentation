@@ -13,5 +13,5 @@ export const DataPreviewGrid: React.FC<Props> = ({
 }) => {
   if (!data) return <div>No data loaded</div>;
 
-  return <div>{/* Render your table or AG Grid here */}</div>;
+  return <div>{/* Render your table here */}</div>;
 };

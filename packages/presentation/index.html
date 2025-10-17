@@ -248,23 +248,30 @@
         <a href="https://dora.dev/research/2025/dora-report/">Dora</a> 95%
         полагаються на ШІ асистентів, з них 70% довіряють ШІ.
       </p>
-      <img width="30%" src="./images/dora.png" alt="dora report">
+      <img width="30%" src="./images/dora.png" alt="dora report" />
     </section>
 
     <section class="slide" data-name="TDD hate">
       <h2>Чому TDD важливий у 2k25?</h2>
       <p>
-        Згідно з іншим дослідженням від NewScientis <a href="https://www.newscientist.com/article/2496133-around-one-third-of-ai-search-tool-answers-make-unsupported-claims/" target="_blank">
-        <a href="https://dora.dev/research/2025/dora-report/">Близько третини відповідей AI-пошукових інструментів не мають підтверджень</a> 
+        Згідно з іншим дослідженням від NewScientis
+        <a
+          href="https://www.newscientist.com/article/2496133-around-one-third-of-ai-search-tool-answers-make-unsupported-claims/"
+          target="_blank"
+          >Близько третини відповідей AI-пошукових інструментів не мають
+          підтверджень</a
+        >
       </p>
-      <img width="50%" src="./images/new-scientist.png" alt="dora report">
+      <img width="50%" src="./images/new-scientist.png" alt="dora report" />
     </section>
 
     <section class="slide" data-name="TDD hate">
       <h2>Чому TDD важливий у 2k25?</h2>
       <h3>Правильний TDD дозволяє</h3>
       <ol>
-        <li class="next">Сформувати точну специфікацію того, що ми хочемо зробити.</li>
+        <li class="next">
+          Сформувати точну специфікацію того, що ми хочемо зробити.
+        </li>
         <li class="next">Перевірити, що ми отримали саме те, що хотіли.</li>
         <li class="next">Впроваджувати зміни маленькими кроками.</li>
       </ol>
@@ -281,72 +288,104 @@
     -->
 
     <section class="slide" data-name="Navigation map">
-      <h2>Navigation map</h2>
-      <h3>1. Збір та аналіз інформації.</h3>
+      <h2 style="margin-bottom: 0">
+        <span class="text-emphasize">Architecture</span>
+      </h2>
 
-      <h4>У цьому блоці будуть надані сутності, їх назви і структура.</h4>
-      <ul>
-        <li>
-          `FileUploaded` компонент завантаження і аналізу файлу від користувача
-        </li>
-        <li>
-          `fileDataToPreview` мапер даних від компонента до подальшого перегляду
-          файла
-        </li>
-        <li>
-          `formatForPreview` форматер комірок таблиці, який повертає дані для
-          трьох типів: дата, гроші, текст
-        </li>
-        <li>`FilePreview` компонент для перегляду таблиці</li>
-      </ul>
+      <pre>
+      <code>
+        data-import/
+        ├── DataImport.tsx
+        ├── components/
+        │   ├── DataImportForm.tsx
+        │   ├── DataPreviewGrid.tsx
+        │   └── FileUploader.tsx
+      </code>
+      </pre>
     </section>
 
     <section class="slide" data-name="Navigation map">
-      <img
-        class="cover"
-        src="./images/service-example.JPG"
-        alt="Приклад сервісу 1"
-      />
+      <h2 style="margin-bottom: 0">
+        <span class="text-emphasize">Architecture</span>
+      </h2>
+
+      <pre>
+      <code>
+        data-import/
+        ├── hooks/
+        │   └── useDataImport.ts
+        ├── services/
+        │   └── parseImportFile.ts
+        └── types/
+            ├── DataImportSelection.types.ts
+            └── DataPreview.types.ts
+      </code>
+      </pre>
     </section>
 
     <section class="slide" data-name="Navigation map">
-      <img
-        class="cover"
-        src="./images/service-example-2.JPG"
-        alt="Приклад сервісу 2"
-      />
+      <h2 style="margin-bottom: 0">
+        <span class="text-emphasize">DataImportSelection.types.ts</span>
+      </h2>
+
+      <pre>
+      <code class="shrinked">
+      export type <mark>DataCell</mark> = string | number | null;
+      export type <mark>DataRow</mark> = Record&lt;string, DataCell&gt;
+
+      export type <mark>DataSheet</mark> = {
+        name: string;
+        headers: string[];
+        rows: DataRow[];
+      };
+      
+      export type <mark>DataFile</mark> = {
+        fileName: string;
+        sheets: DataSheet[];
+      };
+      </code>
+      </pre>
     </section>
 
     <section class="slide" data-name="Navigation map">
-      <h2>1. Navigation map</h2>
+      <h2 style="margin-bottom: 0">
+        <span class="text-emphasize">DataImportSelection.types.ts</span>
+      </h2>
+
+      <pre>
+      <code class="shrinked">
+      interface Props {
+        data: <mark>DataFile | null</mark>;
+        selection: <mark>DataImportSelection | null</mark>;
+      }
+
+      export const <mark>DataPreviewGrid: React.FC&lt;Props&gt;</mark> = ({
+        data,
+        selection,
+      }) => {
+        if (!data) return &lt;div&gt;No data loaded&lt;/div&gt;;
+
+        return &lt;div&gt;{/* Render your table here */}&lt;/div&gt;;
+      };
+      </code>
+      </pre>
+    </section>
+
+    <section class="slide" data-name="TDD hate">
+      <h2>Чому цей підхід важливий?</h2>
+      <h3>Бо він дозволяє:</h3>
       <ol>
-        <li><h3>Збір та аналіз інформації.</h3></li>
-        <li>
-          <h3>
-            Назви сутностей та їх API: SOLID, KISS, YAGNI або будь-яке
-            скорочення
-          </h3>
+        <li class="next">
+          Працювати над задачами <bold>параллельно кільком розробникам</bold>.
+          Наприклад, один робить <mark>DataPreviewGrid</mark>, інший -
+          <mark>DataImportForm</mark>.
         </li>
-        <li class="text-emphasize">
-          <h3>Чіткий список того, що потрібно робити (TODO)</h3>
+        <li class="next">
+          Плануючи сутності заздалегідь ми можемо використати найкращі практики по типу <mark>SOLID</mark>, <mark>DRY</mark>,
+          тощо.
         </li>
+        <li class="next">Але це важко. Бо думати важко. 🙃</li>
       </ol>
-    </section>
-
-    <section class="slide" data-name="Navigation map">
-      <img
-        class="image-normalize"
-        src="./images/road-map.JPG"
-        alt="TODO list"
-      />
-    </section>
-
-    <section class="slide" data-name="Navigation map">
-      <img
-        class="cover"
-        src="./images/complete-navigation-map.JPG"
-        alt="complete-navigation-map"
-      />
     </section>
 
     <section class="slide center-content" data-name="Keep calm">
