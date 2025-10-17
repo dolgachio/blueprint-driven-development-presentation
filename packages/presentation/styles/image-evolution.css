@@ -1,0 +1,14 @@
+.image-evolution {
+  width: 300px;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #33a3ff;
+
+  border-radius: 10px;
+}
+
+.image-evolution__img {
+}

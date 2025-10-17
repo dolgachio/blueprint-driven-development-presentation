@@ -1,12 +1,18 @@
-.who-am-i {
+.slide-with-image {
     display: flex;
+    align-items: center;
 }
 
-.who-am-i__image {
-    width: 30%;
-    height: 30%;
+.slide-with-image__image {
+    width: 40%;
+    height: 40%;
 }
 
-.who-am-i__content {
+.slide-with-image__content {
     margin-left: 40px;
+}
+
+.slide-with-only-image {
+    display: flex;
+    justify-content: center;
 }

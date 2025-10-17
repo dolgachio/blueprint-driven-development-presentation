@@ -14,8 +14,11 @@
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
+    "ag-grid-community": "^31.0.0",
+    "ag-grid-react": "^31.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",

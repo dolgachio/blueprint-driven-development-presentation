@@ -4,10 +4,7 @@
     <title>Shower Presentation Engine</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="styles/ribbon/styles.css"
-    />
+    <link rel="stylesheet" href="styles/ribbon/styles.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <style>
       .shower {
@@ -34,27 +31,114 @@
         <div><span class="text-emphasize">D</span>riven</div>
         <div><span class="text-emphasize">D</span>evelopment *</div>
       </h2>
-      <div>* - презентація все ще в процесі підготовки.</div>
     </section>
 
     <section class="slide" data-name="who-am-i">
       <h2>Who am I?</h2>
-      <div class="who-am-i" data-name="who-am-i">
+      <div class="slide-with-image" data-name="who-am-i">
         <img
-          class="who-am-i__image"
+          class="slide-with-image__image"
           src="./images/who-am-i.jpg"
           alt="Speaker image"
         />
-        <ul class="who-am-i__content">
-          <li class="next">~10 років у розробці</li>
-          <li class="next">JS, TS, Angular, React, Next.js</li>
-          <li class="next">~4 роки брехав, що пишу по TDD</li>
+        <ul class="slide-with-image__content">
+          <li>10+ років у розробці</li>
+          <li>HTML, CSS, JS, TS, Angular, BJJ, React, Next.js</li>
+          <li>4 роки брехав, що пишу по TDD</li>
         </ul>
       </div>
     </section>
 
-    <section class="slide center-content" data-name="intro">
-      <h2 class="">Частина 1: TDD and friends</h2>
+    <section class="slide" data-name="links">
+      <h2>Як мене знайти?</h2>
+      <div class="slide-with-image" data-name="links">
+        <img
+          class="slide-with-image__image"
+          src="./images/oss-qr-code.png"
+          alt="OSS UA link"
+        />
+        <ul class="slide-with-image__content">
+          <li>
+            GitHub:
+            <a href="https://github.com/dolgachio" target="_blank">dolgachio</a>
+          </li>
+          <li>
+            Telegram:
+            <a href="https://t.me/OpenSourceUa" target="_blank"
+              >@OpenSourceUa</a
+            >
+          </li>
+          <li>
+            Instagram:
+            <a href="https://www.instagram.com/dolgach.io/" target="_blank"
+              >dolgach.io</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide" data-name="bad code around us">
+      <h2>Практична задача</h2>
+      <ol>
+        <li class="next"><h3>Візьмем реальну задачу з проєкту</h3></li>
+        <li class="next">
+          <h3>
+            Візьмем гіпотетичного
+            <span class="text-emphasize">Junior Software Engineer</span>
+          </h3>
+        </li>
+        <li class="next">
+          <h3>Навчимо його з джуна до солюшен архітектора за 30 хвилин</h3>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" data-name="bad code around us">
+      <h2>Junior Software Engineer</h2>
+
+      <div class="image-evolution">
+        <img
+          src="./images/stage1.png"
+          alt="morpheus from matrix"
+        />
+      </div>
+    </section>
+
+    <!--
+      <section class="slide center-content" data-name="intro">
+        <h2 class="">Частина 1: TDD and friends</h2>
+      </section>
+
+    -->
+
+    <section class="slide" data-name="task description">
+      <h2>Візьмемо реальну задачу з проєкту</h2>
+      <h3>Імпорт даних з Excel / CSV файлу</h3>
+      <ul>
+        <li>
+          користувач має можливість <strong>завантажити файл з табличкою і переглянути</strong>
+        </li>
+        <li>як файл буде завантажено, буде змінюватись в майбутньому</li>
+        <li>
+          користувач має можливість <strong>обирати рядок і колонку, де починаються
+          данні для імпорту</strong>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" data-name="task demo">
+      <h2>Демонстрація задачі</h2>
+
+      <img
+        style="height: 100%"
+        src="./images/demo.png"
+        alt="task demo"
+      />
+    </section>
+1
+    <section class="slide center-content" data-name="test are not important">
+      <h1>1. Теорія</h1>
     </section>
 
     <section class="slide" data-name="bad code around us">
@@ -69,26 +153,6 @@
           </h3>
         </li>
       </ol>
-    </section>
-
-    <section class="slide" data-name="task description">
-      <h2>Візьмемо реальну задачу з проєкту</h2>
-      <p>
-        Користувач має завантажити Excel File / CSV файл, обрати з нього
-        конкретні колонки і ми його маємо використати для імпорту даних. Ми
-        будемо реалізовувати перегляд даних з файлу.
-      </p>
-      <ul>
-        <li>дані надходять з сервера у DTO визначеного формату</li>
-        <li>є три види типів даних в комірках таблички: дата, гроші, текст</li>
-        <li>користувач має можливість обирати рядок і колонку</li>
-      </ul>
-    </section>
-
-    <section class="slide" data-name="task demo">
-      <h2>Демонстрація задачі</h2>
-
-      <h3>TBD</h3>
     </section>
 
     <section class="slide center-content" data-name="TDD">
@@ -113,6 +177,8 @@
       </ol>
     </section>
 
+
+
     <section class="slide" data-name="What if i tell you">
       <img
         class="cover"
@@ -130,7 +196,7 @@
     </section>
 
     <section class="slide" data-name="my way">
-      <h2>Navigation map -</h2>
+      <h2>Navigation map</h2>
       <p>
         чіткий план з назвами абстракцій, описом їх API, покроковим детальним
         списком задач.
@@ -140,8 +206,8 @@
     <section class="slide" data-name="Navigation map">
       <h2>Navigation map</h2>
       <ol>
-        <li><bold>Збір та аналіз інформації.</bold></li>
-        <li><bold>Назви сутностей та їх API</bold></li>
+        <li><bold>Архітектура і сутності в функціоналі який будуємо</bold></li>
+        <li><bold>Контракти взаємодії, API сутностей</bold></li>
         <li><bold>Чіткий список TODO</bold></li>
       </ol>
     </section>
@@ -436,7 +502,7 @@
 
     <div class="progress"></div>
 
-    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <script src="./shower.js"></script>
     <!-- Copyright © 2020 Yours Truly, Famous Inc. -->
   </body>
 </html>
