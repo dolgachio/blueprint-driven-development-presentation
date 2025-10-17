@@ -79,27 +79,12 @@
     </section>
 
     <section class="slide" data-name="bad code around us">
-      <h2>Практична задача</h2>
+      <h2>Про що будемо сьогодні розмовляти?</h2>
       <ol>
-        <li class="next"><h3>Візьмем реальну задачу з проєкту</h3></li>
-        <li class="next">
-          <h3>
-            Візьмем гіпотетичного
-            <span class="text-emphasize">Junior Software Engineer</span>
-          </h3>
-        </li>
-        <li class="next">
-          <h3>Навчимо його з джуна до солюшен архітектора за 30 хвилин</h3>
-        </li>
+        <li class="next">Теорія правильного TDD</li>
+        <li class="next">Практична задача з реального проєкту</li>
+        <li class="next">Поради і рекомендації в еру ШІ</li>
       </ol>
-    </section>
-
-    <section class="slide" data-name="bad code around us">
-      <h2>Junior Software Engineer</h2>
-
-      <div class="image-evolution">
-        <img src="./images/stage1.png" alt="morpheus from matrix" />
-      </div>
     </section>
 
     <!--
@@ -132,7 +117,7 @@
 
       <img style="height: 100%" src="./images/demo.png" alt="task demo" />
     </section>
-    1
+
     <section class="slide center-content" data-name="test are not important">
       <h1>1. Теорія</h1>
     </section>
@@ -159,9 +144,10 @@
     <section class="slide" data-name="TDD">
       <h2>TDD що це взагалі?</h2>
       <h3>Test Driven Development або тести до коду.</h3>
-      <h3 class="next">
-        БУКВАЛЬНО всі знають що це, всі пробували, але ніхто не пише 😉
-      </h3>
+      <p class="next">
+        БУКВАЛЬНО <strong>всі знають що це</strong>, всі пробували,
+        <strong>але ніхто не пише</strong> 😉
+      </p>
     </section>
 
     <section class="slide" data-name="TDD hate">
@@ -170,6 +156,7 @@
         <li class="next"><h3>Тести - це зайва робота.</h3></li>
         <li class="next"><h3>Тести постійно падають.</h3></li>
         <li class="next"><h3>Тести можна написати і потім.</h3></li>
+        <li class="next"><h3>Моє улюблене ➡️ ➡️ ➡️</h3></li>
       </ol>
     </section>
 
@@ -206,19 +193,20 @@
     </section>
 
     <section class="slide center-content" data-name="my way">
-      <h2>Правильний TDD: Navigation map</h2>
+      <h2>Правильний TDD: Navigation Map</h2>
     </section>
 
     <section class="slide" data-name="my way">
-      <h2>Navigation map</h2>
+      <h2>Navigation Map</h2>
       <p>
         чіткий план з назвами абстракцій, описом їх API, покроковим детальним
         списком задач.
       </p>
+      <img src="./images/plan.avif" height="50%" alt="plan meme" />
     </section>
 
-    <section class="slide" data-name="Navigation map">
-      <h2>Navigation map</h2>
+    <section class="slide" data-name="Navigation Map">
+      <h2>Navigation Map (Triple A)</h2>
       <ol>
         <li class="next">
           <bold
@@ -241,24 +229,19 @@
       </ol>
     </section>
 
-    <section class="slide" data-name="TDD hate">
-      <h2>Чому TDD важливий у 2k25?</h2>
-      <p>
-        Згідно з репортом від
-        <a href="https://dora.dev/research/2025/dora-report/">Dora</a> 95%
-        полагаються на ШІ асистентів, з них 70% довіряють ШІ.
-      </p>
-      <img width="30%" src="./images/dora.png" alt="dora report" />
+    <section class="slide">
+      <h2>Так ШІ, Майбутнє вже наступило скажите ви</h2>
+      <img src="./images/future.webp" height="60%" alt="back to future" />
     </section>
 
     <section class="slide" data-name="TDD hate">
       <h2>Чому TDD важливий у 2k25?</h2>
       <p>
-        Згідно з іншим дослідженням від NewScientis
+        Згідно з дослідженням від NewScientist,
         <a
           href="https://www.newscientist.com/article/2496133-around-one-third-of-ai-search-tool-answers-make-unsupported-claims/"
           target="_blank"
-          >Близько третини відповідей AI-пошукових інструментів не мають
+          >близько третини відповідей AI-пошукових інструментів не мають
           підтверджень</a
         >
       </p>
@@ -267,18 +250,44 @@
 
     <section class="slide" data-name="TDD hate">
       <h2>Чому TDD важливий у 2k25?</h2>
+      <p>
+        Згідно з репортом від
+        <a href="https://dora.dev/research/2025/dora-report/">Dora</a> 95%
+        полагаються на ШІ асистентів, з них 70% довіряють ШІ.
+        <strong>Тобто ми занадто сильно довіряємо ШІ.</strong>
+      </p>
+      <img width="30%" src="./images/dora.png" alt="dora report" />
+    </section>
+
+    <section class="slide" data-name="TDD hate">
+      <h2>Чому TDD важливий у 2k25?</h2>
       <h3>Правильний TDD дозволяє</h3>
       <ol>
         <li class="next">
-          Сформувати точну специфікацію того, що ми хочемо зробити.
+          <strong>Сформувати</strong> точну специфікацію того, що ми хочемо
+          зробити.
         </li>
-        <li class="next">Перевірити, що ми отримали саме те, що хотіли.</li>
-        <li class="next">Впроваджувати зміни маленькими кроками.</li>
+        <li class="next">
+          <strong>Перевірити</strong>, що ми отримали саме те, що хотіли.
+        </li>
+        <li class="next">
+          Впроваджувати зміни <strong>маленькими кроками.</strong>
+        </li>
       </ol>
     </section>
 
+    <section class="slide" data-name="AI and tests Part 4">
+      <a target="_blank" href="https://www.youtube.com/watch?v=1A6uPztchXk">
+        <img
+          class="cover"
+          src="./images/vibe-coding.png"
+          alt="thumbnail of video Vibe Coding analzation"
+        />
+      </a>
+    </section>
+
     <!--
-      <section class="slide" data-name="Navigation map">
+      <section class="slide" data-name="Navigation Map">
         <img
           class="image-normalize"
           src="./images/investigate.JPG"
@@ -287,9 +296,31 @@
       </section>
     -->
 
-    <section class="slide" data-name="Navigation map">
+    <section class="slide center-content" data-name="test are not important">
+      <h2>Правильний TDD: Navigation Map</h2>
+    </section>
+
+    <section class="slide" data-name="task description">
+      <h2>Реальна задача з проєкту</h2>
+      <h3>Імпорт даних з Excel / CSV файлу</h3>
+      <ul>
+        <li>
+          користувач має можливість
+          <strong>завантажити файл з табличкою і переглянути</strong>
+        </li>
+        <li>як файл буде завантажено, буде змінюватись в майбутньому</li>
+        <li>
+          користувач має можливість
+          <strong
+            >обирати рядок і колонку, де починаються данні для імпорту</strong
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" data-name="Navigation Map">
       <h2 style="margin-bottom: 0">
-        <span class="text-emphasize">Architecture</span>
+        <span class="text-emphasize">Navigation Map: Architecture</span>
       </h2>
 
       <pre>
@@ -304,9 +335,9 @@
       </pre>
     </section>
 
-    <section class="slide" data-name="Navigation map">
+    <section class="slide" data-name="Navigation Map">
       <h2 style="margin-bottom: 0">
-        <span class="text-emphasize">Architecture</span>
+        <span class="text-emphasize">Navigation Map: Architecture</span>
       </h2>
 
       <pre>
@@ -316,6 +347,7 @@
         │   └── useDataImport.ts
         ├── services/
         │   └── parseImportFile.ts
+        │   └── formatDataCellForPreview.ts
         └── types/
             ├── DataImportSelection.types.ts
             └── DataPreview.types.ts
@@ -323,13 +355,15 @@
       </pre>
     </section>
 
-    <section class="slide" data-name="Navigation map">
+    <section class="slide" data-name="Navigation Map">
       <h2 style="margin-bottom: 0">
-        <span class="text-emphasize">DataImportSelection.types.ts</span>
+        <span class="text-emphasize">Navigation Map: API</span>
       </h2>
 
       <pre>
       <code class="shrinked">
+      // types/<mark>DataImportSelection.types.ts</mark>
+      
       export type <mark>DataCell</mark> = string | number | null;
       export type <mark>DataRow</mark> = Record&lt;string, DataCell&gt;
 
@@ -347,13 +381,15 @@
       </pre>
     </section>
 
-    <section class="slide" data-name="Navigation map">
+    <section class="slide" data-name="Navigation Map">
       <h2 style="margin-bottom: 0">
-        <span class="text-emphasize">DataImportSelection.types.ts</span>
+        <span class="text-emphasize">Navigation Map: API</span>
       </h2>
 
       <pre>
       <code class="shrinked">
+      // components/<mark>DataPreviewGrid.tsx</mark>  
+
       interface Props {
         data: <mark>DataFile | null</mark>;
         selection: <mark>DataImportSelection | null</mark>;
@@ -371,185 +407,269 @@
       </pre>
     </section>
 
-    <section class="slide" data-name="TDD hate">
-      <h2>Чому цей підхід важливий?</h2>
-      <h3>Бо він дозволяє:</h3>
+    <section class="slide" data-name="Navigation Map">
+      <h2 style="margin-bottom: 0">
+        <span class="text-emphasize">Navigation Map: Actions</span>
+      </h2>
+
       <ol>
-        <li class="next">
-          Працювати над задачами <bold>параллельно кільком розробникам</bold>.
-          Наприклад, один робить <mark>DataPreviewGrid</mark>, інший -
-          <mark>DataImportForm</mark>.
+        <li>
+          <strong>Компонент DataPreviewGrid.tsx</strong>
+          <ol>
+            <li>
+              Форматування даних, функція <mark>formatDataCellForPreview</mark>
+            </li>
+            <li>Інтеграція з компонентом <mark>AgGrid</mark> або подібним</li>
+            <ol>
+              <li>Підготовка даних для таблиці</li>
+              <li>Налаштування колонок і рядків</li>
+            </ol>
+          </ol>
         </li>
-        <li class="next">
-          Плануючи сутності заздалегідь ми можемо використати найкращі практики по типу <mark>SOLID</mark>, <mark>DRY</mark>,
-          тощо.
-        </li>
-        <li class="next">Але це важко. Бо думати важко. 🙃</li>
+        <li><strong>Компонент DataImportForm.tsx</strong></li>
+        <li>...</li>
+        <li>тощо</li>
       </ol>
     </section>
 
-    <section class="slide center-content" data-name="Keep calm">
-      <h2>Keep calm.</h2>
-    </section>
-
-    <section class="slide" data-name="Complete Navigation Map">
-      <h2>TODO (Navigation map)</h2>
+    <section class="slide" data-name="TDD hate">
+      <h2>Чому створення <strong>Navigation Map</strong> дуже важливо?</h2>
+      <strong>Бо вона дозволяє:</strong>
       <ol>
-        <li>
-          <h3>Сервіс з перетворення FileHierarchyTreeService</h3>
-          <ol>
-            <li>метод getFilesHierarchy(tree, someFlag)</li>
-            <li>метод formatTree(nodes)</li>
-          </ol>
+        <li class="next">
+          Працювати над однією великою фічею
+          <strong>параллельно кільком розробникам</strong>. Наприклад, один
+          робить <mark>DataPreviewGrid</mark>, інший -
+          <mark>DataImportForm</mark>, тощо.
         </li>
-        <li>Верстка для відображення</li>
-        <li>Використовувати сервіс у компоненті</li>
-        <li>...</li>
-        <li>і т.д.</li>
+        <li class="next">
+          Плануючи сутності заздалегідь ми можемо використати найкращі практики
+          по типу <mark>SOLID</mark>, <mark>DRY</mark>, тощо.
+        </li>
+        <li class="next">
+          <mark>Гарний дизайн і архітектура</mark> запорука
+          <mark>добрих тестів</mark>.
+        </li>
       </ol>
     </section>
 
     <section class="slide center-content" data-name="tests and code">
-      <h2>2. Тест 🔁 Код</h2>
+      <h2>🙏 Чи можемо ми нарешті почати писати тести?</h2>
+      <h2 class="next">Ніт 🗿</h2>
     </section>
 
-    <section class="slide center-content" data-name="part 2 intro">
-      <h2>Частина 2: ШІ і тести</h2>
+    <section class="slide" data-name="tests and code">
+      <h2>Для написання тестів теж існують кращі практики і правила</h2>
+      <p class="next">
+        <strong>Роботів і людей треба направляти, як це і не дивно.</strong>
+      </p>
+      <img src="./images/surprise.jpg" width="50%" alt="surprise" />
     </section>
 
-    <section class="slide" data-name="AI and tests Part 1">
-      <h2>ШІ і тести</h2>
-      <h4>1. Як ми викорсистовуємо ШІ для написання тестів</h4>
-      <ul>
-        <li>Спочатку пишемо код - потім генеруємо тести</li>
-        <li>
-          Це не завжди гарна ідея, бо якщо помилка в коді, то буде тест на
-          помилку
+    <section class="slide" data-name="tests and code">
+      <h2>Як направляти роботів і людей?</h2>
+      <ol>
+        <li class="next">
+          Всі інструменти контролю якості коду і їх конфіги:
+          <strong>eslint, prettier, тощо</strong>
         </li>
-        <li>Різні люди генерують оце все по різному</li>
-      </ul>
-    </section>
-
-    <section class="slide" data-name="AI and tests Part 2">
-      <h2>ШІ і тести</h2>
-      <h4>2. Як краще використовувати ШІ для написання тестів</h4>
-      <ul>
-        <li>Писати тести до коду</li>
-        <li>
-          Використовувати ШІ для генерації тестів на основі navigation map
+        <li class="next">
+          Документація для роботів і людей, наприклад в теці
+          <strong>/docs</strong> в <strong>MarkDown</strong> форматі.
+          <strong>Як для коду, так і для тестів.</strong>
         </li>
-        <li>ЗАВЖДИ ДИВИТИСЬ УВАЖНО ЩО ТАМ НАГЕНЕРУВАЛО, БО БУДЕ БІДА</li>
-      </ul>
+        <li class="next">
+          <strong>Приклади</strong> правильних тестів в репозиторії.
+        </li>
+        <li class="next">
+          <strong>Інші</strong>: в залежності від інструментів.
+        </li>
+      </ol>
     </section>
 
-    <section class="slide" data-name="AI and tests Part 3">
-      <h2>ШІ і тести</h2>
-      <h3>Тести все ще важливі</h3>
-      <h4>Не вірете? Послухайте розумних людей на наступному слайді</h4>
+    <section class="slide" data-name="tests and code">
+      <h2>
+        <a
+          href="https://github.com/goldbergyoni/javascript-testing-best-practices"
+          >javascript-testing-best-practices (24.5k ⭐)</a
+        >
+      </h2>
+
+      <pre class="next">
+      <code class="shrinked">
+      // docs/testing-guidelines.md
+      # Test Writing Guidelines
+
+      0. The Golden Rule: <mark>Design for lean testing</mark>       
+      </code>
+      </pre>
     </section>
 
-    <section class="slide" data-name="AI and tests Part 4">
-      <a target="_blank" href="https://www.youtube.com/watch?v=1A6uPztchXk">
-        <img
-          class="cover"
-          src="./images/vibe-coding.png"
-          alt="thumbnail of video Vibe Coding analzation"
-        />
-      </a>
+    <section class="slide" data-name="tests and code">
+      <h2>
+        <a
+          href="https://github.com/goldbergyoni/javascript-testing-best-practices"
+          >javascript-testing-best-practices (24.5k ⭐)</a
+        >
+      </h2>
+
+      <pre>
+      <code class="shrinked">
+      // docs/testing-guidelines.md
+      # Test Writing Guidelines
+      0. The Golden Rule: <mark>Design for lean testing</mark>
+      
+      ## Section 1: The Test Anatomy
+      
+      1.1 Include 3 parts in each test name
+      (1) <mark>What is being tested?</mark> For example, the ProductsService.addNewProduct method
+      (2) <mark>Under what circumstances and scenario?</mark> For example, no price is passed to the method
+      (3) <mark>What is the expected result?</mark> For example, the new product is not approved
+      </code>
+      </pre>
     </section>
 
-    <section class="slide center-content" data-name="part 2 intro">
-      <h2>Частина 3: Вимоги до написання тестів</h2>
+    <section class="slide" data-name="tests and code">
+      <h2>
+        <a
+          href="https://github.com/goldbergyoni/javascript-testing-best-practices"
+          >javascript-testing-best-practices (24.5k ⭐)</a
+        >
+      </h2>
+
+      <pre>
+      <code class="shrinked">
+      // docs/testing-guidelines.md
+      # Test Writing Guidelines
+      0. The Golden Rule: <mark>Design for lean testing</mark>  
+      
+      ## Section 1: The Test Anatomy
+      
+      1.1 Include 3 parts in each test name
+      (1) <mark>What is being tested?</mark> For example, the ProductsService.addNewProduct method
+      (2) <mark>Under what circumstances and scenario?</mark> For example, no price is passed to the method
+      (3) <mark>What is the expected result?</mark> For example, the new product is not approved
+
+      1.2 Structure tests by the <mark>AAA</mark> pattern
+      1.3 Don’t “foo”, use <mark>realistic input data</mark>
+      ...
+      </code>
+      </pre>
     </section>
 
-    <section class="slide" data-name="AI and tests Part 1">
-      <h2>Вимоги до написання тестів</h2>
-      <h3>
-        Сюрприз, сюрприз: по нормальному треба писати не тільки код, але і тести
-      </h3>
-      <h3>Тут буде кілька слайдів про те, як писати тести і чому так</h3>
-      <ul>
-        <li>На основі мого досвіду і...</li>
-        <li>
-          <a
-            href="https://github.com/goldbergyoni/javascript-testing-best-practices"
-            >javascript-testing-best-practices (24.5k ⭐)</a
+    <section class="slide" data-name="part 2 intro">
+      <h2>Приклад тесту Ч.1</h2>
+
+      <pre>
+      <code class="shrinked">
+      import { <mark>formatDataCellForPreview as sut</mark> } from "./formatDataCellForPreview";
+
+      describe("formatDataCellForPreview", () => {
+        let dataCell: DataCell | null;
+
+        it("should return None for null input", () => {
+          <mark>// Arrange</mark>
+          dataCell = null;
+
+          <mark>// Act</mark>
+          const formattedValue= sut(dataCell);
+
+          <mark>// Assert</mark>
+          expect(formattedValue).toBe("None");
+        });
+      });
+      </code>
+      </pre>
+    </section>
+
+    <section class="slide" data-name="part 2 intro">
+      <h2>Приклад тесту Ч.2</h2>
+
+      <pre>
+      <code class="shrinked">
+      describe("formatDataCellForPreview", () => {
+        <mark>describe("when input is a number", () => {</mark>
+          it("should add currency formatting to it", () => {
+            // Arrange
+            dataCell = <mark>122000.56</mark>;
+
+            // Act
+            const formattedValue= sut(dataCell);
+
+            // Assert
+            expect(formattedValue).toBe("$1,220,00.56");
+          });
+        <mark>});</mark>        
+      });
+      </code>
+      </pre>
+    </section>
+
+    <section class="slide" data-name="part 2 intro">
+      <h2>Поширені помилки</h2>
+
+      <ol>
+        <li class="next">
+          Писати тести, щоб <strong>вони спочатку пройшли</strong>, а не впали.
+        </li>
+        <li class="next">
+          Намагатись забезпечити покриття тестами на якийсь відсоток.
+        </li>
+        <li class="next">
+          Занадто складні тести або <strong>one test to rule them all.</strong>.
+        </li>
+        <li class="next">
+          Більше про про помилки
+          <a href="https://www.youtube.com/watch?v=SQUI9Ixb790">тут</a>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" data-name="part 2 intro">
+      <h2>Як почати писати по TDD вже сьогодні?</h2>
+
+      <ol>
+        <li class="next">
+          <mark style="background: green; color: white">EASY:</mark>
+          <strong>Вивчіть основи</strong> TDD. Неможливо за 30 хвилин це все
+          охопити.
+        </li>
+        <li class="next">
+          <mark style="background: yellow; color: black">MEDIUM:</mark> Напишіть
+          Тест на Багу,
+          <strong
+            >але тест має бути написаним до коду, і він має впасти.</strong
           >
         </li>
-        <li>
-          <a
-            href="https://github.com/goldbergyoni/nodejs-testing-best-practices"
-            >nodejs-testing-best-practices (4.1k ⭐)</a
+        <li class="next">
+          <strong
+            ><mark style="background: red; color: white">HARD:</mark> Пишіть по
+            TDD весь новий код</strong
           >
         </li>
-      </ul>
+        <li class="next">Keep Calm ❤️</li>
+      </ol>
     </section>
-
-    <!--
-    <section class="slide" data-name="satisfying">
-      <h2>Найкраща частина. Але чому?</h2>
-      <img class="cover" src="./images/satisfying.gif" alt="satisfying" />
-    </section>
-    -->
 
     <section class="slide" data-name="Cons">
-      <h2>Підсумки, мінуси:</h2>
+      <h2>Підсумки:</h2>
+      <strong>Переваги правильного TDD:</strong>
       <ol>
-        <li class="next"><h3>Думати складно.</h3></li>
-        <li class="next"><h3>Накидати вхідні дані для тестів складно.</h3></li>
         <li class="next">
-          <h3>На початкових етапах здається, що ти нічого не робиш.</h3>
+          Дизайн нашого коду краще бо в нас є <strong>Navigation Map.</strong>
         </li>
+        <li class="next">
+          Ми можемо <strong>делегувати задачі</strong> і працювати над великою
+          фічею <strong>параллельно.</strong>
+        </li>
+        <li class="next">
+          Наш код <strong>легше підтримувати</strong> і
+          <strong>розширювати</strong> в майбутньому.
+          <mark>Ми краще спимо вночі.</mark>
+        </li>
+        <li class="next">Можна видєлуватись і виступати на конференціях.</li>
       </ol>
     </section>
-
-    <section class="slide">
-      <h2>Підсумки, плюси:</h2>
-      <ol class="list-fit">
-        <li class="next"><h3>Впевненість у своєму коді.</h3></li>
-        <li class="next">
-          <h3>Прискорення роботи порівняно з перевіркою в браузері.</h3>
-        </li>
-        <li class="next"><h3>Ніколи не заблокований бекендом.</h3></li>
-        <li class="next">
-          <h3>Значно простіше оцінити задачу за складністю/часом.</h3>
-        </li>
-        <li class="next"><h3>Можна видєлуватись перед іншими.</h3></li>
-      </ol>
-    </section>
-
-    <section class="slide" data-name="bad code around us">
-      <h2>Чому весь код навколо нас поганий?</h2>
-      <ol>
-        <li><h3>Низька компетенція всіх крім нас самих.</h3></li>
-        <li><h3>Лінь щось виправляти.</h3></li>
-        <li><h3>Замовники винні.</h3></li>
-        <li class="text-emphasize">
-          <h3>Ми спочатку робимо, а потім думаємо. ✅</h3>
-        </li>
-      </ol>
-    </section>
-
-    <section class="slide" data-name="Practical advices">
-      <h2>Практичні поради:</h2>
-      <ol>
-        <li class="next"><h3>Спробуйте ТІЛЬКИ Navigation map (План) 📙</h3></li>
-        <li class="next"><h3>Напишіть тест на багу. 🐞</h3></li>
-        <li class="next">
-          <h3>
-            Не намагайтеся себе зламати. І не пропонуйте цей підхід іншим поки
-            самі не спробуєте ❤️
-          </h3>
-        </li>
-      </ol>
-    </section>
-
-    <!--
-
-    <section class="slide" data-name="Підсумки">
-      <h2 class="shout">Підсумки</h2>
-    </section>
-    -->
 
     <section class="slide" data-name="links">
       <h2>Посилання</h2>
@@ -584,6 +704,12 @@
         <li>
           <a href="https://www.youtube.com/watch?v=1A6uPztchXk" target="_blank"
             >Vibe Coding Is The WORST IDEA Of 2025</a
+          >
+        </li>
+
+        <li>
+          <a href="https://www.youtube.com/watch?v=SQUI9Ixb790"
+            >The Most Common Test Driven Development Mistakes</a
           >
         </li>
       </ol>
